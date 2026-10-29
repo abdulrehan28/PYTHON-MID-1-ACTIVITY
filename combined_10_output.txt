@@ -1,0 +1,148 @@
+PYTHON ACTIVITY-BASED LEARNING: COMBINED CASE STUDIES
+Case studies: 23, 28, 30, 38, 66, 72, 76, 77, 81, 94
+
+====================================================================
+23. STUDENT TIMETABLE CONFLICT DETECTION
+====================================================================
+Course timetable:
+  Python   Mon periods 1-2, room R101
+  Maths    Mon periods 2-3, room R102
+  English  Mon periods 4-5, room R101
+  Physics  Tue periods 1-2, room R103
+CONFLICT: Python overlaps with Maths on Mon.
+Unavailable-room assignments: None
+Timetable status: INVALID
+
+====================================================================
+28. REPEATED TRANSACTION DETECTION
+====================================================================
+Transaction records:
+  TX101: Rs. 450
+  TX102: Rs. 1200
+  TX101: Rs. 450
+  TX103: Rs. 9500
+  TX104: Rs. -50
+  TX105: Rs. 700
+Suspicious entries:
+  TX101 | Rs. 450 | duplicate ID
+  TX103 | Rs. 9500 | above threshold
+  TX104 | Rs. -50 | negative amount
+Total records: 6
+Suspicious records: 3
+
+====================================================================
+30. STUDENT EMAIL AND IDENTIFIER VALIDATION
+====================================================================
+Email checks:
+  rehan23@college.edu        -> VALID (valid format)
+  aisha.k@college.edu        -> VALID (valid format)
+  bad-email                  -> INVALID (must contain exactly one @)
+  student@@college.edu       -> INVALID (must contain exactly one @)
+  name@college               -> INVALID (domain must contain a dot in a valid position)
+Registration ID checks:
+  CSE2026001     -> VALID (valid format)
+  ECE2026042     -> VALID (valid format)
+  CS2026         -> INVALID (must be 10 characters)
+  CSE20A6003     -> INVALID (last 7 characters must be digits)
+
+====================================================================
+38. ATM MENU-DRIVEN BANKING SIMULATION
+====================================================================
+Deposit Rs. 1500.00: accepted
+Withdrawal Rs. 1200.00: accepted
+Withdrawal Rs. 2500.00: rejected (daily limit exceeded)
+Balance inquiry: Rs. 5300.00
+Transaction summary:
+  Deposit    Rs.  1500.00 - Accepted
+  Withdrawal Rs.  1200.00 - Accepted
+  Withdrawal Rs.  2500.00 - Rejected
+Final balance: Rs. 5300.00
+Total withdrawn today: Rs. 1200.00
+
+====================================================================
+66. STUDENT ACADEMIC RISK CLASSIFICATION
+====================================================================
+Risk rules: marks average < 40, attendance < 75%, lab score < 50%.
+Asha     average= 77.0, attendance= 92%, lab= 85%
+         risk=LOW; factors=none
+Bharat   average= 43.0, attendance= 68%, lab= 45%
+         risk=HIGH; factors=low attendance, low laboratory score
+Charan   average= 58.0, attendance= 76%, lab= 52%
+         risk=LOW; factors=none
+Divya    average= 39.7, attendance= 82%, lab= 38%
+         risk=HIGH; factors=low marks, low laboratory score
+Summary: HIGH=2, MEDIUM=0, LOW=2
+
+====================================================================
+72. SMART HOSTEL RESOURCE MONITORING
+====================================================================
+Room 101 (floor 1): 145 kWh, 1800 L, bill=Rs. 1196.00; alerts=none
+Room 102 (floor 1): 95 kWh, 1200 L, bill=Rs. 784.00; alerts=none
+Room 201 (floor 2): 210 kWh, 2400 L, bill=Rs. 1728.00; alerts=electricity high, water high
+Room 202 (floor 2): 130 kWh, 1600 L, bill=Rs. 1072.00; alerts=none
+Floor summary:
+  Floor 1: 240 kWh, 3000 L, total charges Rs. 1980.00
+  Floor 2: 340 kWh, 4000 L, total charges Rs. 2800.00
+
+====================================================================
+76. UNIVERSITY EXAMINATION RESULT MODERATION
+====================================================================
+Asha: original=[38, 67, 81], moderated=[41, 67, 81]
+  Result before moderation: FAIL
+  Result after moderation:  PASS
+Bharat: original=[29, 45, 54], moderated=[32, 45, 54]
+  Result before moderation: FAIL
+  Result after moderation:  FAIL
+Charan: original=[49, 52, 61], moderated=[49, 52, 61]
+  Result before moderation: PASS
+  Result after moderation:  PASS
+Rule: 3 grace marks are added only to subjects below 40; maximum is 100.
+
+====================================================================
+77. SMART ELECTRICITY BILLING FOR MULTIPLE APARTMENTS
+====================================================================
+A-101: 85 units; energy=Rs. 255.00; fixed=Rs. 50; rebate=Rs. 0; bill=Rs. 305.00
+A-102: 145 units; energy=Rs. 525.00; fixed=Rs. 50; rebate=Rs. 0; bill=Rs. 575.00
+B-201: 230 units; energy=Rs. 1010.00; fixed=Rs. 50; rebate=Rs. 0; bill=Rs. 1060.00
+B-202: 55 units; energy=Rs. 165.00; fixed=Rs. 50; rebate=Rs. 20; bill=Rs. 195.00
+Apartments ranked by consumption (highest first):
+  B-201: 230 units
+  A-102: 145 units
+  A-101: 85 units
+  B-202: 55 units
+
+====================================================================
+81. CAMPUS EVENT SEATING AND ENTRY VALIDATION
+====================================================================
+Seat map:
+  Row 1: REG101 | REG102 | EMPTY
+  Row 2: REG103 | REG104 | REG105
+  Row 3: EMPTY | REG106 | REG102
+Ticket validation:
+  REG101: ACCEPTED
+  REG102: ACCEPTED
+  REG103: ACCEPTED
+  REG102: REJECTED (duplicate entry)
+  REG999: REJECTED (registration not seated)
+Total capacity: 9
+Occupied seats: 7
+Available seats: 2
+Duplicate seat assignments: ['REG102']
+
+====================================================================
+94. DISASTER RELIEF SUPPLY ALLOCATION
+====================================================================
+Allocation policy: priority 1 is most urgent; allocate available stock in priority order.
+Area A  | Water      | priority 1 | needed  70 | allocated  70 | unmet   0
+Area A  | Food packs | priority 1 | needed  50 | allocated  50 | unmet   0
+Area B  | Blankets   | priority 1 | needed  30 | allocated  30 | unmet   0
+Area B  | Water      | priority 2 | needed  50 | allocated  30 | unmet  20
+Area C  | Food packs | priority 2 | needed  45 | allocated  30 | unmet  15
+Area C  | Blankets   | priority 3 | needed  20 | allocated  10 | unmet  10
+Remaining stock:
+  Water: 0
+  Food packs: 0
+  Blankets: 0
+Total unmet demand: 45
+
+All 10 case-study demonstrations completed.
